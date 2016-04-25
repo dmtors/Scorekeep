@@ -1,0 +1,148 @@
+body {
+  background-color: #323b43;
+  font-family: Roboto, sans-serif;
+}
+
+#page {
+  width: 720px;
+  margin: auto;
+}
+
+#logo {
+  font-weight: 400;
+  font-size: 21px;
+  color: #59626a;
+  letter-spacing: 5px;
+  padding-top: 32px;
+  display: inline-block;
+}
+
+#type {
+  font-weight: 500;
+  font-size: 14px;
+  color: #f4f7f9;
+  padding: 16px 0 16px 8px;
+  display: inline-block;
+}
+
+#line-lo {
+  width: 100%;
+  border-bottom: 2px solid #f4f7f9;
+  margin-top: -18px;
+}
+
+#line-sh {
+  width: 158px;
+  border-bottom: 2px solid #59626a;
+  margin-top: -18px;
+}
+
+.card {
+  width: 349px;
+  background: #f4f7f9;
+  border-radius: 3px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.left {
+  margin-right: 18px;
+}
+
+.score {
+  font-weight: 700;
+  font-size: 240px;
+  color: #ced7df;
+  display: inline;
+  padding-left: 37px;
+}
+
+.btn-prim {
+  font-weight: 500;
+  font-size: 14px;
+  color: #f4f7f9;
+  width: 147px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 100px;
+  border: 2px solid #59626a;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-prim:hover {
+  border-color: #f4f7f9;
+}
+
+.points-set {
+  font-weight: 700;
+  font-size: 14px;
+  color: #f4f7f9;
+  display: inline-block;
+  width: 147px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #168eea;
+  border-radius: 100px;
+  border: 2px solid #168eea;
+  cursor: pointer;
+}
+
+.points-set:hover {
+  background-color: #323b43;
+  border: 2px solid #f4f7f9;
+}
+
+.arrow {
+  color: #59626a;
+  font-size: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section {
+  width: 440px;
+  margin: 0 auto;
+}
+
+.team {
+  color: #59626a;
+  font-size: 18px;
+  font-weight: 700;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ball {
+  color: #f4f7f9;
+}
+
+.play {
+  color: #323b43;
+}
+
+.win {
+  color: #168eea;
+}
+
+.lose {
+  color: #ced7df;
+}
+
+#tip {
+  font-weight: 400;
+  color: #59626a;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer {
+  width: 380px;
+  margin: -24px auto;
+}
