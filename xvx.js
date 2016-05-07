@@ -1,6 +1,6 @@
-var sharksScore = 0;
-var jetsScore = 0;
-var sharksBall = true;
+var team1Score = 0;
+var team2Score = 0;
+var team1Ball = true;
 var pointsToWin;
 var isGameOver = true;
 var setScore = function (team, score) {
@@ -9,10 +9,10 @@ var setScore = function (team, score) {
     } else {
     displayScore = score;
     }
-  if (team == sharks) {
-    $("#sharks-score").text(displayScore);
+  if (team == team1) {
+    $("#team1-score").text(displayScore);
     } else {
-    $("#jets-score").text(displayScore);
+    $("#team2-score").text(displayScore);
   }
 }
 
@@ -29,16 +29,16 @@ var setPointsToWin = function() {
         return;
       }
       else {
-        $("#sharks-score").text('00');
-        $("#jets-score").text('00');
+        $("#team1-score").text('00');
+        $("#team2-score").text('00');
         $(".score").removeClass("win");
         $(".score").removeClass("lose");
         $(".score").addClass("play");
-        $("#sharks").removeClass("win");
+        $("#team1").removeClass("win");
         $("#left").removeClass("win");
-        $("#jets").removeClass("win");
+        $("#team2").removeClass("win");
         $("#right").removeClass("win");
-        $("#sharks").addClass("ball");
+        $("#team1").addClass("ball");
         $("#left").addClass("ball");
       }
     }
@@ -46,67 +46,67 @@ var setPointsToWin = function() {
     $("#choose").html(pointsToWin);
     $("#choose").addClass("points-set");
     $(".score").addClass("play");
-    $("#sharks").addClass("ball");
+    $("#team1").addClass("ball");
     $("#left").addClass("ball");
 
     document.onkeydown = checkKey;
       function checkKey(e) {
         e = e || window.event;
-        if (sharksScore == pointsToWin) {
+        if (team1Score == pointsToWin) {
           return;
         }
-        if (jetsScore == pointsToWin) {
+        if (team2Score == pointsToWin) {
           return;
         }
         if (e.keyCode == '37') {
-            $("#sharks").addClass("ball");
+            $("#team1").addClass("ball");
             $("#left").addClass("ball");
-            $("#jets").removeClass("ball");
+            $("#team2").removeClass("ball");
             $("#right").removeClass("ball");
         }
         else if (e.keyCode == '39') {
-            $("#jets").addClass("ball");
+            $("#team2").addClass("ball");
             $("#right").addClass("ball");
-            $("#sharks").removeClass("ball");
+            $("#team1").removeClass("ball");
             $("#left").removeClass("ball");
         }
         if (e.keyCode == '38') {
-          if ($("#sharks").hasClass("ball")) {
-            sharksScore += 1;
-            setScore(sharks, sharksScore);
+          if ($("#team1").hasClass("ball")) {
+            team1Score += 1;
+            setScore(team1, team1Score);
           }
-          if ($("#jets").hasClass("ball")) {
-            jetsScore += 1;
-            setScore(jets, jetsScore);
+          if ($("#team2").hasClass("ball")) {
+            team2Score += 1;
+            setScore(team2, team2Score);
           }
         }
         if (e.keyCode == '40') {
-          if ($("#sharks").hasClass("ball") && sharksScore > 0) {
-            sharksScore -= 1;
-            setScore(sharks, sharksScore);
+          if ($("#team1").hasClass("ball") && team1Score > 0) {
+            team1Score -= 1;
+            setScore(team1, team1Score);
           }
-          if ($("#jets").hasClass("ball") && jetsScore > 0) {
-            jetsScore -= 1;
-            setScore(jets, jetsScore);
+          if ($("#team2").hasClass("ball") && team2Score > 0) {
+            team2Score -= 1;
+            setScore(team2, team2Score);
           }
         }
-       if (sharksScore == pointsToWin) {
-          $("#sharks-score").addClass("win");
-          $("#jets-score").addClass("lose");
-          $("#sharks").removeClass("ball");
+       if (team1Score == pointsToWin) {
+          $("#team1-score").addClass("win");
+          $("#team2-score").addClass("lose");
+          $("#team1").removeClass("ball");
           $("#left").removeClass("ball");
-          $("#sharks").addClass("win");
+          $("#team1").addClass("win");
           $("#left").addClass("win");
           $("#choose").html('Set Winning Score');
           $("#choose").removeClass("points-set");
           $("#choose").addClass("btn-prim");
         }
-        if (jetsScore == pointsToWin) {
-          $("#jets-score").addClass("win");
-          $("#sharks-score").addClass("lose");
-          $("#jets").removeClass("ball");
+        if (team2Score == pointsToWin) {
+          $("#team2-score").addClass("win");
+          $("#team1-score").addClass("lose");
+          $("#team2").removeClass("ball");
           $("#right").removeClass("ball");
-          $("#jets").addClass("win");
+          $("#team2").addClass("win");
           $("#right").addClass("win");
           $("#choose").html('Set Winning Score');
           $("#choose").removeClass("points-set");

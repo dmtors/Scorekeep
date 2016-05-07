@@ -71,7 +71,6 @@ body {
   display: inline-block;
   cursor: pointer;
 }
-
 .btn-prim:hover {
   border-color: #f4f7f9;
 }
@@ -91,7 +90,6 @@ body {
   border: 2px solid #168eea;
   cursor: pointer;
 }
-
 .points-set:hover {
   background-color: #323b43;
   border: 2px solid #f4f7f9;

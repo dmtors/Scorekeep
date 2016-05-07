@@ -77,10 +77,9 @@ body {
   border: 2px solid $mid-grey;
   display: inline-block;
   cursor: pointer;
-}
-
-.btn-prim:hover {
-  border-color: $light-grey;
+  &:hover {
+    border-color: $light-grey;
+  }
 }
 
 .points-set {
@@ -97,11 +96,10 @@ body {
   border-radius: 100px;
   border: 2px solid $blue;
   cursor: pointer;
-}
-
-.points-set:hover {
-  background-color: #323b43;
-  border: 2px solid $light-grey;
+  &:hover {
+    background-color: $dark-grey;
+    border: 2px solid $light-grey;
+  }
 }
 
 .arrow {
