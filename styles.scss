@@ -3,7 +3,7 @@ $dark-grey: #323b43;
 $light-grey: #f4f7f9;
 $mid-grey: #59626a;
 $midlight-grey: #ced7df;
-$blue: #168eea;
+$prim-color: #ff0033;
 
 body {
   background-color: $dark-grey;
@@ -92,9 +92,9 @@ body {
   vertical-align: middle;
   padding-top: 8px;
   padding-bottom: 8px;
-  background-color: $blue;
+  background-color: $prim-color;
   border-radius: 100px;
-  border: 2px solid $blue;
+  border: 2px solid $prim-color;
   cursor: pointer;
   &:hover {
     background-color: $dark-grey;
@@ -133,7 +133,7 @@ body {
 }
 
 .win {
-  color: $blue;
+  color: $prim-color;
 }
 
 .lose {
